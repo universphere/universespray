@@ -97,8 +97,8 @@ rbd_provisioner_enabled: false
 # rbd_provisioner_reclaim_policy: Delete
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: true
-ingress_nginx_host_network: true
+ingress_nginx_enabled: false
+# ingress_nginx_host_network: true
 ingress_publish_status_address: ""
 # ingress_nginx_nodeselector:
 #   kubernetes.io/os: "linux"
@@ -133,7 +133,7 @@ ingress_alb_enabled: false
 # alb_ingress_aws_debug: "false"
 
 # Cert manager deployment
-cert_manager_enabled: true
+cert_manager_enabled: false
 cert_manager_namespace: "cert-manager"
 # cert_manager_tolerations:
 #   - key: node-role.kubernetes.io/control-plane
@@ -168,7 +168,7 @@ cert_manager_namespace: "cert-manager"
 #   - "--dns01-recursive-nameservers=1.1.1.1:53,8.8.8.8:53"
 
 # MetalLB deployment
-metallb_enabled: true
+metallb_enabled: false
 metallb_speaker_enabled: "{{ metallb_enabled }}"
 # metallb_version: v0.13.9
 metallb_protocol: "layer2"
